@@ -26,20 +26,30 @@ int main() {
 
         if(tempchar == 'L')
         {
-            it --;
+            if(it == l.begin())
+                ;
+            else
+                it --;
         }
         else if(tempchar == 'R')
         {
-            it ++;
+            if(it == l.end())
+                ;
+            else
+                it ++;
         }
         else if(tempchar == 'D')
         {
-            it = l.erase(it);
+            if(it == l.end())
+                ;
+            else
+                it = l.erase(it);
         }
         else if(tempchar == 'P')
         {
             char tempchar_insert;
             cin >> tempchar_insert;
+
             l.insert(it, tempchar_insert);
        }
  
